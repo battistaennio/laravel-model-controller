@@ -6,14 +6,15 @@
 @endsection
 
 @section('content')
-<div class="container my-5">
-    <h1>{{ $title }}</h1>
-    <img src="{{ Vite::asset('resources/img/colibri.jpg') }}" alt="" class="img-fluid">
-    <p>
-        {{ $text }}
-    </p>
-</div>
+    <div class="container my-5">
+        <h1>Titolo</h1>
 
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque alias sit distinctio fugit quisquam ducimus
+            quas. Iste labore, magnam laboriosam, eaque ex alias nihil perferendis sed recusandae pariatur reiciendis
+            voluptate!
+        </p>
+    </div>
 @endsection
 
 
