@@ -10,8 +10,10 @@ class PageController extends Controller
 {
     public function index()
     {
+        $title = "Film Disponibili";
+        $movies = Movie::all();
 
-        return view('home');
+        return view('home', compact('movies', 'title'));
     }
 
     public function contacts()
