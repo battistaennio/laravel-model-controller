@@ -25,4 +25,10 @@ class PageController extends Controller
     {
         return view('about');
     }
+
+    public function bestMovies()
+    {
+        $movies = Movie::where('vote', '>=', 9)->get();
+        return view('bestMovies', compact('movies'));
+    }
 }
