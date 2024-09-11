@@ -31,4 +31,10 @@ class PageController extends Controller
         $movies = Movie::where('vote', '>=', 9)->get();
         return view('bestMovies', compact('movies'));
     }
+
+    public function oldMovies()
+    {
+        $movies = Movie::whereYear('date', '<=', 1960)->get();
+        return view('oldMovies', compact('movies'));
+    }
 }
