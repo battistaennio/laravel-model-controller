@@ -7,13 +7,30 @@
 
 @section('content')
     <div class="container my-5">
-        <h1>Titolo</h1>
+        <h1>{{ $title }}</h1>
 
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque alias sit distinctio fugit quisquam ducimus
-            quas. Iste labore, magnam laboriosam, eaque ex alias nihil perferendis sed recusandae pariatur reiciendis
-            voluptate!
-        </p>
+        <div class="row">
+
+            @foreach ($movies as $movie)
+                <div class="card text-center m-3" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $movie->title }}</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">{{ $movie->original_title }}</h6>
+                        <p class="card-text">
+                            @if (str_contains($movie->nationality, 'american/british'))
+                                Americano/Inglese
+                            @else
+                                Americano
+                            @endif
+                        </p>
+                        <p class="card-text">{{ date('d/m/Y', strtotime($movie->date)) }}</p>
+                        <p class="card-text">{{ $movie->vote }}/10</p>
+                    </div>
+                </div>
+            @endforeach
+
+        </div>
+
     </div>
 @endsection
 
