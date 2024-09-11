@@ -25,6 +25,7 @@
                         </p>
                         <p class="card-text">{{ date('d/m/Y', strtotime($movie->date)) }}</p>
                         <p class="card-text">{{ $movie->vote }}/10</p>
+                        <a href="{{ route('movieDetail', ['id' => $movie->id]) }}">Dettagli</a>
                     </div>
                 </div>
             @endforeach

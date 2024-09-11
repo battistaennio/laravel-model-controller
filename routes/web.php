@@ -23,3 +23,5 @@ Route::get('/chi-siamo', [PageController::class, 'about'])->name('about');
 Route::get('/film-migliori', [PageController::class, 'bestMovies'])->name('bestMovies');
 
 Route::get('/film-datati', [PageController::class, 'oldMovies'])->name('oldMovies');
+
+Route::get('/dettaglio-film/{id}', [PageController::class, 'movieDetail'])->name('movieDetail');
